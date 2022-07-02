@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+#hamburger-button {
+  position: fixed !important;
+  z-index: 99999;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  display: inline;
+  float: right;
+  width: 5rem;
+  height: 5rem;
+  background-color: #000000;
+}
+#hamburger-button .bar {
+  position: absolute;
+  left: 20%;
+  transform: translateX(-20%);
+  background-color: #ffffff;
+  width: 50px;
+  height: 5px;
+}
+#hamburger-button .top {
+  top: 25%;
+  transform: translateY(-25%);
+}
+#hamburger-button .top_close {
+  top: 50%;
+  transform: translateY(-50%);
+  transform: rotate(-45deg);
+  transition: transform 0.3s;
+}
+#hamburger-button .middle {
+  top: 50%;
+  transform: translateY(-50%);
+}
+#hamburger-button .middle_close {
+  opacity: 0;
+}
+#hamburger-button .bottom {
+  top: 75%;
+  transform: translateY(-75%);
+}
+#hamburger-button .bottom_close {
+  top: 50%;
+  transform: translateY(-50%);
+  transform: rotate(45deg);
+  transition: transform 0.3s;
+}
+
+@media all and (max-width: 767px) {
+
+}
+
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+
+@media all and (min-width: 1024px) {
+
+}
