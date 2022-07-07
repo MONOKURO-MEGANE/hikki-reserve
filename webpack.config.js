@@ -4,6 +4,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const WorkboxWebpackPlugin = require("workbox-webpack-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV == "development";
 
@@ -19,9 +20,20 @@ const config = {
     host: "localhost",
   },
   cache: false,
+  stats: {
+    children: true,
+  },
   plugins: [
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: "**/*",
+    }),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "src", "index.html"),
+      filename: "index.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, "src", "software.html"),
+      filename: "software.html",
     }),
 
     new MiniCssExtractPlugin(),
@@ -47,6 +59,9 @@ const config = {
       // Add your rules for custom modules here
       // Learn more about loaders from https://webpack.js.org/loaders/
     ],
+  },
+  watchOptions: {
+    ignored: "/node_modules/",
   },
 };
 

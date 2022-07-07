@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "hikki-reserve.com",
   "main": "src/index.js",
-  "source": "src/index.html",
+  "source": [
+    "src/index.html",
+    "src/software.html"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode=production --node-env=production --color",
@@ -17,6 +20,7 @@
   "license": "ISC",
   "devDependencies": {
     "@webpack-cli/generators": "^2.5.0",
+    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.1",

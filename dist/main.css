@@ -382,6 +382,11 @@ body > footer {
   top: 100vh;
 }
 
+figure {
+  margin: 0;
+  padding: 0;
+}
+
 img {
   width: 100%;
   height: auto;
@@ -413,11 +418,8 @@ img {
 /*!*********************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/stylesheet/common.scss ***!
   \*********************************************************************************************************************/
-figure {
-  margin: 0;
-  padding: 0;
-}
-
+@charset "UTF-8";
+/* ハンバーガーボタン */
 #hamburger-button {
   position: fixed !important;
   z-index: 99999;
@@ -475,13 +477,15 @@ figure {
 /*!*********************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/stylesheet/header.scss ***!
   \*********************************************************************************************************************/
-header h1 {
-  background-color: #212136;
-  margin: auto;
+header {
   margin-right: 5rem;
+}
+header h1 {
+  margin: auto;
   padding: 5px;
   width: 100%;
   height: auto;
+  border-bottom: 2px ridge #ffc7c7;
   text-align: right;
   font-size: 0.9rem;
   font-weight: normal;
@@ -577,18 +581,19 @@ div#overlay {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background-color: #dfdfdf;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 div#modal-area {
   z-index: 999;
   width: 80%;
   height: 80%;
+  padding: 10vh 10vw;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  overflow-y: scroll;
+  overflow-y: auto;
   background-color: #dfdfdf;
 }
 
@@ -607,25 +612,37 @@ div#global-menu-wrapper {
   align-items: stretch;
 }
 div#global-menu-wrapper .site-title-area {
-  width: max(50%, 400px);
+  width: max(50%, 300px);
   height: auto;
 }
 div#global-menu-wrapper .site-title-area p {
-  margin: 5% auto auto;
+  margin: auto;
   text-align: left;
 }
 div#global-menu-wrapper .site-title-area p strong {
   font-size: 2.6rem;
   font-weight: normal;
 }
+div#global-menu-wrapper .site-title-area p strong a:link, div#global-menu-wrapper .site-title-area p strong a:hover, div#global-menu-wrapper .site-title-area p strong a:active, div#global-menu-wrapper .site-title-area p strong a:visited {
+  text-decoration: underline;
+  color: #333;
+  font-size: 2rem;
+  font-family: "Yu Gothic";
+  font-weight: bold;
+}
 div#global-menu-wrapper .global-menu-area {
-  width: max(50%, 400px);
+  width: max(50%, 300px);
   height: auto;
 }
 div#global-menu-wrapper .global-menu-area .menu-list {
   padding-left: 0;
-  margin-top: 0;
+  margin: auto;
 }
 div#global-menu-wrapper .global-menu-area .menu-list .menu-item {
   list-style-type: none;
+}
+div#global-menu-wrapper .global-menu-area .menu-list .menu-item a:link, div#global-menu-wrapper .global-menu-area .menu-list .menu-item a:hover, div#global-menu-wrapper .global-menu-area .menu-list .menu-item a:active, div#global-menu-wrapper .global-menu-area .menu-list .menu-item a:visited {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.4rem;
 }

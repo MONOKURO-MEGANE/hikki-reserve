@@ -1,22 +1,21 @@
-@charset "UTF-8";
-
 div#overlay {
   z-index: 99;
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background-color: #dfdfdf;
+  background-color: rgba(0, 0, 0, .8);
 }
 
 div#modal-area {
   z-index: 999;
   width: 80%;
   height: 80%;
+  padding: 10vh 10vw;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  overflow-y: scroll;
+  overflow-y: auto;
   background-color: #dfdfdf;
 }
 
@@ -35,26 +34,41 @@ div#global-menu-wrapper {
   justify-content: unset;
   align-items: stretch;
   .site-title-area {
-    width: max(50%, 400px);
+    width: max(50%, 300px);
     height: auto;
     p {
-      margin: 5% auto auto;
+      margin: auto;
       text-align: left;
       strong {
         font-size: 2.6rem;
         font-weight: normal;
+        a:link,a:hover,a:active,a:visited {
+          text-decoration: underline;
+
+          color: #333;
+          font-size: 2rem;
+          font-family: "Yu Gothic";
+          font-weight: bold;
+        }
       }
     }
   }
   .global-menu-area {
-    width: max(50%, 400px);
+    width: max(50%, 300px);
     height: auto;
     .menu-list {
       padding-left: 0;
 
-      margin-top: 0;
+      margin: auto;
       .menu-item {
         list-style-type: none;
+
+        a:link,a:hover,a:active,a:visited {
+          text-decoration: none;
+
+          color: #333;
+          font-size: 1.4rem;
+        }
       }
     }
   }
