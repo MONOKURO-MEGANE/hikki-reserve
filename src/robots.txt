@@ -3,6 +3,6 @@ Disallow:
 Sitemap: https://hikki-reserve.com/sitemap.xml
 
 User-agent: *
-Disallow: wordpress/wp-admin/
-Allow: wordpress/wp-admin/admin-ajax.php
+Disallow: /wordpress/wp-admin/
+Allow: /wordpress/wp-admin/admin-ajax.php
 Sitemap: https://hikki-reserve.com/wordpress/wp-sitemap.xml
